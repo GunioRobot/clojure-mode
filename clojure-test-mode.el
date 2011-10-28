@@ -247,7 +247,7 @@
             (incf clojure-test-error-count)
             (clojure-test-highlight-problem line event actual)))))))
 
-	
+
 (defun clojure-test-highlight-problem (line event message)
   (save-excursion
     (goto-char (point-min)) (forward-line (1- line))
@@ -418,7 +418,7 @@ Retuns the problem overlay if such a position is found, otherwise nil."
 ;;;###autoload
 (progn
   (defun clojure-test-maybe-enable ()
-    "Enable clojure-test-mode if the current buffer contains a namespace 
+    "Enable clojure-test-mode if the current buffer contains a namespace
 with a \"test.\" bit on it."
     (let ((ns (clojure-find-package))) ; defined in clojure-mode.el
       (when (search "test." ns)

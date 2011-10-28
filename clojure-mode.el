@@ -799,7 +799,7 @@ use (put-clojure-indent 'some-symbol 'defun)."
                                       (one-or-more (not (any whitespace)))))
                     (one-or-more (any whitespace "\n")))
       ;; why is this here? oh (in-ns 'foo) or (ns+ :user)
-      (zero-or-one (any ":'"))         
+      (zero-or-one (any ":'"))
       (group (one-or-more (not (any "()\"" whitespace))) word-end)))
 
 ;; for testing *namespace-name-regex*, you can evaluate this code and make
@@ -808,7 +808,7 @@ use (put-clojure-indent 'some-symbol 'defun)."
 ;; (mapcar (lambda (s) (let ((n (string-match *namespace-name-regex* s)))
 ;;                       (if n (match-string 4 s))))
 ;;         '("(ns foo)"
-;;           "(ns 
+;;           "(ns
 ;; foo)"
 ;;           "(ns foo.baz)"
 ;;           "(ns ^:bar foo)"
